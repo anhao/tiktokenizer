@@ -31,8 +31,9 @@ const PRICING: Record<string, BN> = {
   "gpt-4": BN("0.03").div(1000),
   "gpt-4-1106-preview": BN("0.01").div(1000),
   "gpt-4-32k": BN("0.03").div(1000),
-  "gpt-3.5-turbo": BN("0.0010").div(1000),
+  "gpt-3.5-turbo": BN("0.00150").div(1000),
   "gpt-3.5-instruct": BN("0.0015").div(1000),
+  "gpt-4o":BN("0.005").div(1000)
 };
 
 function encodeWhitespace(str: string) {
@@ -68,13 +69,13 @@ export function TokenViewer(props: {
     <>
       <div className="flex gap-4">
         <div className="flex-grow rounded-md border bg-slate-50 p-4 shadow-sm">
-          <p className="text-sm ">Token count</p>
+          <p className="text-sm ">Tokens 数量</p>
           <p className="text-lg">{tokenCount}</p>
         </div>
 
         {pricing != null && (
           <div className="flex-grow rounded-md border bg-slate-50 p-4 shadow-sm">
-            <p className="text-sm ">Price per prompt</p>
+            <p className="text-sm ">消耗金额</p>
             <p className="text-lg">
               ${pricing?.multipliedBy(tokenCount)?.toFixed()}
             </p>

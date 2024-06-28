@@ -184,7 +184,7 @@ export function ChatGPTEditor(props: {
           })
         }
       >
-        Add message
+        添加消息
       </Button>
     </div>
   );

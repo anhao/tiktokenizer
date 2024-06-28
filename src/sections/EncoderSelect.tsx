@@ -73,21 +73,6 @@ export function EncoderSelect(props: {
 
             <CommandSeparator />
 
-            <CommandGroup heading="Open-Source Models">
-              {openSourceModels.options
-                .filter((x) => !POPULAR.includes(x))
-                .map((value) => (
-                  <CommandItem
-                    key={value}
-                    value={value}
-                    onSelect={onSelect(value)}
-                  >
-                    {value}
-                  </CommandItem>
-                ))}
-            </CommandGroup>
-
-            <CommandSeparator />
 
             <CommandGroup heading="OpenAI Encodings">
               {oaiEncodings.options
